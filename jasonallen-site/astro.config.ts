@@ -23,7 +23,9 @@ const hasExternalScripts = false;
 const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroIntegration)[] = []) =>
   hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
 
-export default defineConfig({
+export default defineConfig({  
+  site: 'https://jasondallen.github.io',
+  base: '/jasonallen-site',   
   output: 'static',
 
   // Prefetch links as they enter the viewport for snappier navigations
